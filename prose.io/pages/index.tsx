@@ -1,14 +1,9 @@
 import ProseItem from "../components/ProseItem";
 import Prose from "../models/Prose";
+import ProseData from "../prose.json";
 
 export default function Home() {
-
-  const newProse: Prose = new Prose("To be or not to be, that is the question.", "To Kill a mockingbird?", ["Tag 1", "Tag 2", "Tag 3"]);
-  const proseItems: Prose[] = [];
-
-  proseItems.push(newProse);
-  proseItems.push(newProse);
-  proseItems.push(newProse);
+  const proseItems: Prose[] = ProseData;
 
   return (
     <div className='w-full bg-slate-900'>
