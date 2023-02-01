@@ -2,8 +2,6 @@ from typing import Union
 import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -33,7 +31,7 @@ def read_root():
 
 @app.get("/prose")
 def get_prose():
-    return JSONResponse(content = data);
+    return data
 
 
 
